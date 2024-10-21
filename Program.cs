@@ -13,13 +13,13 @@ Random.Shared.Shuffle(cartas);
 int[] cartucho = { 0, 0, 0, 0, 0, 0 };
 int[] array = { 0, 1, 2, 3, 4, 5 };
 Random.Shared.Shuffle(array);
-String[] mesa = { "As", "Rainha", "Rei" };
+string[] mesa = { "As", "Rainha", "Rei" };
 Random.Shared.Shuffle(mesa);
 
 string[] player1 = { cartas[0], cartas[1], cartas[2], cartas[3], cartas[4] };
 string[] player2 = { cartas[5], cartas[6], cartas[7], cartas[8], cartas[9] };
 
-String cartaMesa = mesa[2];
+string cartaMesa = mesa[2];
 Boolean estadoCarta = true;  //Se é ou não a carta da mesa
 
 int numeroRandom = array[2];
@@ -72,11 +72,10 @@ for (int z = 0; z < player1.Length; z++)
   for (int j = 0; j < player1.Length; j++)
     Console.WriteLine(player1[j]);
 
-  List<String> lista = new List<String>(player1);
+  List<string> lista = new List<string>(player1);
 
   Console.WriteLine("Que carta queres jogar? Ou Desconfias?");
-  String cartaJogada = Console.ReadLine();
-
+  string cartaJogada = Console.ReadLine();
   if (cartaJogada == "Desconfio" & estadoCarta == true)
   {
     if (!Disparar(ref p2, ref estado, cartucho))
@@ -134,10 +133,10 @@ for (int z = 0; z < player2.Length; z++)
   for (int j = 0; j < player2.Length; j++)
     Console.WriteLine(player2[j]);
 
-  List<String> lista = new List<String>(player2);
+  List<string> lista = new List<string>(player2);
 
   Console.WriteLine("Que carta queres jogar? Ou Desconfias?");
-  String cartaJogada = Console.ReadLine();
+  string cartaJogada = Console.ReadLine();
 
 
   if (cartaJogada == "Desconfio" & estadoCarta == true)
